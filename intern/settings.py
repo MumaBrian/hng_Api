@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
+from distutils.debug import DEBUG
 from pathlib import Path
 import os
 
@@ -21,11 +22,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY=os.environ.get("SECRET_KEY")
+# SECRET_KEY=os.environ.get("SECRET_KEY")
+SECRET_KEY="django-insecure-!c2ib9@cxhf(d4+1ay1x(bjblfsak(!o=9nnrhun0srr-%ff$)"
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-
-ALLOWED_HOSTS = ["*"]
+# DEBUG = False
+DEBUG=True
+ALLOWED_HOSTS =[] #["*"]
 
 
 # Application definition
@@ -39,6 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'api.apps.ApiConfig',
     'rest_framework',
+    "dj_rest_auth", 
+    "rest_framework.authtoken",
 ]
 
 MIDDLEWARE = [

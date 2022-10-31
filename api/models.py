@@ -8,7 +8,7 @@ class Api(models.Model):
     # created = models.DateTimeField(auto_now_add=True)
     # datecompleted = models.DateTimeField(null=True, blank=True)
     # important = models.BooleanField(default=False)
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    # user = models.ForeignKey(User, on_delete=models.CASCADE)
     slackUsername=models.CharField(max_length=100)
     backend=models.BooleanField(default=False)
     age=models.IntegerField()
