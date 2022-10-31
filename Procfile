@@ -1,4 +1,4 @@
- web: qunicorn intern.wsgi
- release: python manage.ру makemigrations --noinput
+ web: gunicorn intern.wsgi
+ release: python manage.py makemigrations --noinput
  release: python manage.py collectstatic --noinput
  release: python manage.py migrate -noinput
