@@ -8,7 +8,7 @@ from rest_framework.response import Response
 
 from .models import Api
 # Create your views here.
-class ListApi(generics.ListAPIView):
+class ListApi(generics.ListCreateAPIView):
     queryset=Api.objects.all()
     serializer_class=ApiSerializer
 
